@@ -1,16 +1,22 @@
 {
+  "extends": "./node_modules/gts/tsconfig-google.json",
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
+    "rootDir": ".",
+    "outDir": "dist",
+    "baseUrl": "./src",
+    "target": "es5",
+    "resolveJsonModule": true,
     "esModuleInterop": true,
-    "strict": true,
-    "strictPropertyInitialization": false,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "sourceMap": true,
-    "outDir": "dist",
-    "rootDir": "src",
+    "downlevelIteration": true,
+    "lib": [
+      "dom",
+      "es5",
+      "es2015.collection",
+      "es2015.iterable",
+      "esnext.array",
+    ],
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
 }

@@ -1,0 +1,24 @@
+{
+  "rootDir": "./",
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "coverageDirectory": "./coverage",
+  "resetMocks": true,
+  "clearMocks": true,
+  "testPathIgnorePatterns": [
+    "<rootDir>/.vscode/",
+    "<rootDir>/node_modules/",
+    "<rootDir>/environments/",
+    "<rootDir>/scripts/"
+  ],
+  "moduleNameMapper": {
+    "^drivers(.*)$": "<rootDir>/src/drivers$1",
+    "^domain(.*)$": "<rootDir>/src/domain$1",
+    "^infra(.*)$": "<rootDir>/src/infra$1",
+    "^cross-cutting(.*)$": "<rootDir>/src/cross-cutting$1",
+    "^use-cases(.*)$": "<rootDir>/src/use-cases$1"
+  },
+  "collectCoverageFrom": ["src/**/*.ts"],
+  "coverageReporters": ["text", "html", "cobertura", "text-summary"],
+  "moduleDirectories": ["node_modules", "src"]
+}

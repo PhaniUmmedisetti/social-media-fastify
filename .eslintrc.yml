@@ -1,0 +1,14 @@
+---
+env:
+  jest: true
+  node: true
+extends:
+  - './node_modules/gts'
+ignorePatterns:
+  - node_modules
+  - build
+  - migrations
+rules:
+  no-any: off
+  no-warning-comments: off
+  '@typescript-eslint/no-explicit-any': off
